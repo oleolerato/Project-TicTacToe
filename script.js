@@ -62,14 +62,16 @@ const gameBoard = (() => {
         ++filledCount
         switch(currentPlayer){
           case 'X':
-              playerX.play(cell,board);
-              playerX.checkForWin(winningCodes)
-              currentPlayer = "O"
+            cell.style.color = "#5378F9"
+            playerX.play(cell,board);
+            playerX.checkForWin(winningCodes)
+            currentPlayer = "O"
             break;
           case 'O':
-              playerO.play(cell, board)
-              playerO.checkForWin(winningCodes)
-              currentPlayer = "X"
+            cell.style.color = "#3B1F19"
+            playerO.play(cell, board)
+            playerO.checkForWin(winningCodes)
+            currentPlayer = "X"
             break;
         }
       }
