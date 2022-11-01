@@ -8,5 +8,11 @@ let currentPlayer = "X"
 const gameBoard = (() => {
   const gameBrd = document.querySelectorAll('#gameBoard div')
   let board = ["", "", "", "", "", "", "", "",""]
+  
+  gameBrd.forEach((cell) => {
+    cell.addEventListener('click', () => {
+      cell.textContent = currentPlayer;
+    })
+  })
   return({gameBrd, board})
 })()
