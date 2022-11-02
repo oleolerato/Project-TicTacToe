@@ -48,7 +48,8 @@ const gameBoard = (() => {
     [2, 5, 8]
     ];
   let filledCount = 0;
-  const message = document.querySelector('#resultsDisplay')
+  const resultDisplay = document.querySelector('#resultsDisplay')
+  const message = document.createElement('span');
       
   
   const playerX = Player('X');
@@ -109,6 +110,7 @@ const gameBoard = (() => {
       } else{
         message.textContent = `Player ${winner} wins! 🥳`
       }
+   resultDisplay.appendChild(message)
   }
   
   return({winningCodes, gameBrd, board});
