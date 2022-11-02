@@ -28,8 +28,8 @@ h1{
 
 #gameBoard{
   margin: 10px;
-  width: 70vw;
-  height: 70vw;
+  width: 60vw;
+  height: 60vw;
   
   display: grid;
   grid-template-columns: repeat(3, 1fr);
